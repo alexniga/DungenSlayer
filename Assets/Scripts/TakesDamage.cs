@@ -6,30 +6,31 @@ using UnityEngine.UI;
 public class TakesDamage : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    public Image healthBar;
+    public Slider slider;
+    public Text text;
     private float maxHealth;
-    private float height;
+
     private void Start()
     {
-        maxHealth = healthBar.rectTransform.sizeDelta.x;
-        height = healthBar.rectTransform.sizeDelta.y;
+        maxHealth = 100f;
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            //Debug.Log(health.rectTransform.sizeDelta);
-            float width = healthBar.rectTransform.sizeDelta.x;
             
-            if(width > 0)
+            if(slider.value > 0)
             {
                 Debug.Log("Hit");
-                healthBar.rectTransform.sizeDelta = new Vector2(width - 0.1f * maxHealth, height);
+                slider.value = slider.value - 10;
+                
             } else
             {
                 Debug.Log("Dead");
+
             }
+            text.text = slider.value.ToString() + " / 100";
         }
     }
 }
