@@ -20,7 +20,7 @@ public class MoveEnemyControledRandom : MonoBehaviour
     Vector2 lastPosition;
 
     public GameObject obj;
-
+    public GameObject EnemyWeapon;
     private bool canFade;
     private Color alphaColor;
     private float timeToFade = 1.0f;
@@ -33,6 +33,7 @@ public class MoveEnemyControledRandom : MonoBehaviour
         movingTime = 5f;
         speed = 0.7f;
         distanceToMove = 2f;
+        EnemyWeapon.SetActive(false);
     }
 
     private void Update()
@@ -42,7 +43,8 @@ public class MoveEnemyControledRandom : MonoBehaviour
         if (movingTimer <= 0)
         {
             movingTimer = movingTime;
-            StartCoroutine(FadeTo(0.0f, 0.5f));
+            StartCoroutine(FadeToZero(0.0f, 0.5f));
+            
             StartCoroutine("MoveTheEnemy");// MoveTheEnemy();
         }
 
@@ -94,6 +96,20 @@ public class MoveEnemyControledRandom : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().material.color = newColor;
             yield return null;
         }
+        EnemyWeapon.SetActive(true);
+    }
+
+    IEnumerator FadeToZero(float aValue, float aTime)
+    {
+        float alpha = transform.GetComponent<SpriteRenderer>().material.color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            transform.GetComponent<SpriteRenderer>().material.color = newColor;
+            yield return null;
+        }
+        EnemyWeapon.SetActive(false);
+        EnemyWeapon.GetComponent<ShootingEnemyIInvisible>().once = true;
     }
 }
 
