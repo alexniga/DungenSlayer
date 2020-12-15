@@ -20,15 +20,11 @@ public class ShootingEnemyIInvisible : MonoBehaviour
             print("active");
             if (once == true)
             {
-               target = GameObject.FindWithTag("Player");
-               // targetPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z) - transform.position;
-               // targetRotation = Quaternion.LookRotation(-targetPoint, Vector3.up);
-               //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2.0f);
-                /*
-                var targetPosition = target.transform.position;
-                targetPosition.y = transform.position.y;
-                transform.LookAt(targetPosition);
-                */
+                target = GameObject.FindWithTag("Player");
+
+                transform.LookAt(target.transform);
+                transform.right = target.transform.position - transform.position;
+
                 print("SHOOTING");
                 once = false;
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -43,16 +39,5 @@ public class ShootingEnemyIInvisible : MonoBehaviour
         }
         
     }
-    /*
-    public void TimeToShoot()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
-        rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-    }
-    private void Start()
-    {
-        InvokeRepeating("TimeToShoot", 0f, 1f);
-    }
-    */
+
 }
