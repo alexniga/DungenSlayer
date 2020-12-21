@@ -8,29 +8,33 @@ public class TakesDamage : MonoBehaviour
     // Start is called before the first frame update
     public Slider slider;
     public Text text;
-    private float maxHealth;
+    public Text damageReduction;
+    //private float maxHealth;
 
     private void Start()
     {
-        maxHealth = 100f;
-        
+        //maxHealth = 100f;
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        GameObject bullet = collision.gameObject;
+        if (bullet.CompareTag("bullet"))
         {
-            
-            if(slider.value > 0)
+            float bulletDamage = bullet.GetComponent<Bullet>().bulletDamage;
+            if (slider.value > 0)
             {
                 Debug.Log("Hit");
-                slider.value = slider.value - 10;
-                
-            } else
+                slider.value = slider.value - bulletDamage * (100f - float.Parse(damageReduction.text)) / 100;
+
+            }
+            else
             {
                 Debug.Log("Dead");
 
             }
             text.text = slider.value.ToString() + " / 100";
         }
+        
     }
 }

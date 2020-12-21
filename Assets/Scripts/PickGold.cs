@@ -16,7 +16,7 @@ public class PickGold : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("asd");
+        //Debug.Log("asd");
         if (other.gameObject.CompareTag("Gold"))
         {
             other.gameObject.SetActive(false);
