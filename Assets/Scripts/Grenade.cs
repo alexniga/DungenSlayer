@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,10 @@ public class Grenade : CancelableItem
     private Vector2 playerPos;
     private float distancePlayer;
     private float range = 4.1f;
+    private DateTime timer;
+    private int state = 0;
+    private float radius;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +25,7 @@ public class Grenade : CancelableItem
 
     private void FixedUpdate()
     {
-        
+
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         playerPos = new Vector2(grenadeRange.transform.position.x, grenadeRange.transform.position.y);
         distancePlayer = Vector2.Distance(mousePos, playerPos);
@@ -34,15 +39,26 @@ public class Grenade : CancelableItem
 
         if (Input.GetKeyDown(KeyCode.Mouse2))
         {
-            Debug.Log("Boom");
+            //Debug.Log("Boom");
             //gameObject.GetComponent<Grenade>().enabled = false;
+            //isUsed = true;
+            AreaDamageEnemies();
+            timer = DateTime.UtcNow.AddSeconds(0);
+            state = 1;
+        }
+        if (state == 1 && (DateTime.UtcNow - timer).TotalSeconds >= 0)
+        {
+            Debug.Log("Boom");
             isUsed = true;
+            state = 0;
         }
     }
 
     // Update is called once per frame
     private void OnEnable()
     {
+        Vector3 boxSize = grenadeArea.GetComponent<SpriteRenderer>().bounds.size;
+        radius = boxSize.x / 2;
         grenadeRange.SetActive(true);
         grenadeArea.SetActive(true);
         isCanceled = false;
@@ -53,6 +69,17 @@ public class Grenade : CancelableItem
     {
         grenadeRange.SetActive(false);
         grenadeArea.SetActive(false);
-        
+
+    }
+
+    void AreaDamageEnemies()
+    {
+        Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(mousePos, radius);
+        foreach (Collider2D col in objectsInRange)
+        {
+            String enemy = col.gameObject.name;
+            Debug.Log(enemy);
+
+        }
     }
 }

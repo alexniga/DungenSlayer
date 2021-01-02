@@ -148,7 +148,7 @@ public class Inventory : MonoBehaviour
             quantity = 2,
             iconKey = 1,
             duration = 1000,
-            cooldown = 1,
+            cooldown = 3,
             isCancelable = true
     };
 
