@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   text: {fileID: 0}
+  damageReduction: {fileID: 0}
 --- !u!114 &647937556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,8 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletPrefab: {fileID: 6064111023049226163, guid: 4c77c0ff820bea841b953a9c556f1c23,
     type: 3}
-  bulletForce: 20
+  shopOpened: 0
+  attackValue: {fileID: 0}
   attackTimer: 0.35
 --- !u!114 &647937557
 MonoBehaviour:
@@ -501,6 +503,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.03198593
       objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0498ab68c9d32b64f95579a59c075977, type: 3}
 --- !u!1001 &1544499917
@@ -599,6 +611,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.030699207
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0498ab68c9d32b64f95579a59c075977, type: 3}
@@ -795,6 +817,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.034889895
       objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899469657373720746, guid: 0498ab68c9d32b64f95579a59c075977,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0498ab68c9d32b64f95579a59c075977, type: 3}
 --- !u!1001 &6540600078885845271
@@ -808,6 +840,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941540916231804069, guid: 169eeaa9f1e1e4943b747a5888a838f5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941540916231804069, guid: 169eeaa9f1e1e4943b747a5888a838f5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539834477759185936, guid: 169eeaa9f1e1e4943b747a5888a838f5,
         type: 3}
