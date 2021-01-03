@@ -17,7 +17,7 @@ public class ShootingEnemyIInvisible : MonoBehaviour
     {
         if (this.isActiveAndEnabled)
         {
-            print("active");
+            //print("active");
             if (once == true)
             {
                 target = GameObject.FindWithTag("Player");
@@ -34,7 +34,7 @@ public class ShootingEnemyIInvisible : MonoBehaviour
         }
         else
         {
-            print("INactive");
+           // print("INactive");
             once = true;
         }
         
