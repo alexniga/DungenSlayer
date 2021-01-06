@@ -3,25 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Health
-  - Gold
-  - slot1
-  - slot2
-  - slot3
-  - slot4
-  - slot5
-  - item_HealthPotion
-  - bullet
-  - item_Grenade
-  - item_Shield
-  - item_BoostSpeed
-  - Shop
-  - shop
-  - shop_HealthPotion
-  - shop_BoostSpeed
-  - shop_Grenade
-  - shop_Shield
+  tags: [Bullet, Health, Gold, Health, Gold, slot1, slot2, slot3, slot4, slot5, item_HealthPotion,
+    bullet, item_Grenade, item_Shield, item_BoostSpeed, Shop, shop, shop_HealthPotion,
+    shop_BoostSpeed, shop_Grenade, shop_Shield]
   layers:
   - Default
   - TransparentFX
@@ -31,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemy
   - 
   - 
   - 
