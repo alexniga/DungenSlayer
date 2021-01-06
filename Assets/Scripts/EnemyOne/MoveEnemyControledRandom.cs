@@ -21,7 +21,6 @@ public class MoveEnemyControledRandom : MonoBehaviour
 
     public GameObject obj;
     public GameObject EnemyWeapon;
-    public GameObject healthBar;
     private bool canFade;
     private Color alphaColor;
     private float timeToFade = 1.0f;
@@ -35,7 +34,6 @@ public class MoveEnemyControledRandom : MonoBehaviour
         speed = 0.7f;
         distanceToMove = 2f;
         EnemyWeapon.SetActive(false);
-        healthBar.SetActive(false);
     }
 
     private void Update()
@@ -99,7 +97,6 @@ public class MoveEnemyControledRandom : MonoBehaviour
             yield return null;
         }
         EnemyWeapon.SetActive(true);
-        healthBar.SetActive(true);
     }
 
     IEnumerator FadeToZero(float aValue, float aTime)
@@ -112,7 +109,6 @@ public class MoveEnemyControledRandom : MonoBehaviour
             yield return null;
         }
         EnemyWeapon.SetActive(false);
-        healthBar.SetActive(false);
         EnemyWeapon.GetComponent<ShootingEnemyIInvisible>().once = true;
     }
 }
