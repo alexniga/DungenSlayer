@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3192187938443492376}
   m_Layer: 0
   m_Name: BulletEnemy
-  m_TagString: Bullet
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c8a23386fbdff4c8409f0aad43b5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletDamage: 0
 --- !u!50 &3192187938443492376
 Rigidbody2D:
   serializedVersion: 4

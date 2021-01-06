@@ -8,9 +8,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Vector2 mousePos;
 
-    public Rigidbody2D rbPlayer;
+    private Rigidbody2D rbPlayer;
     public Rigidbody2D rbWeapon;
     public Camera cam;
+
+    private void Start()
+    {
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
 
 
     // Update is called once per frame
