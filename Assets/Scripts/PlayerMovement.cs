@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 5f;
+    public float movementSpeed;
     private Vector2 movement;
     private Vector2 mousePos;
 
     private Rigidbody2D rbPlayer;
-    public Rigidbody2D rbWeapon;
-    public Camera cam;
+    private Rigidbody2D rbWeapon;
+    private Camera cam;
 
     private void Start()
     {
+        movementSpeed = 5f;
         rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        rbWeapon = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Rigidbody2D>();
     }
 
 

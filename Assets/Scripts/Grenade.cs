@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Grenade : CancelableItem
 {
-    public GameObject grenadeRange;
-    public GameObject grenadeArea;
-    public Camera cam;
+    private GameObject grenadeRange;
+    private GameObject grenadeArea;
+    private Camera cam;
 
     private Vector2 mousePos;
     private Vector2 playerPos;
@@ -20,7 +20,9 @@ public class Grenade : CancelableItem
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        grenadeArea = GameObject.FindGameObjectWithTag("GranadeArea");
+        grenadeArea = GameObject.FindGameObjectWithTag("GranadeRange");
     }
 
     private void FixedUpdate()
@@ -57,6 +59,9 @@ public class Grenade : CancelableItem
     // Update is called once per frame
     private void OnEnable()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        grenadeArea = GameObject.FindGameObjectWithTag("Player").transform.GetChild(2).gameObject;
+        grenadeRange = GameObject.FindGameObjectWithTag("Player").transform.GetChild(1).gameObject;
         Vector3 boxSize = grenadeArea.GetComponent<SpriteRenderer>().bounds.size;
         radius = boxSize.x / 2;
         grenadeRange.SetActive(true);

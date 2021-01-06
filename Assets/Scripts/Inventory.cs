@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public Camera cam;
+    private Camera cam;
     private List<Item> items;
     private List<Item> slots;
     private List<DateTime> startCountDurations;
     private List<DateTime> startCountCoolDowns;
-    public GameObject player;
+    private GameObject player;
     public GameObject shopBg;
     public Text gold;
     public Text shopTitle;
@@ -31,6 +31,8 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         CreateItemList();
         CreatePrefabPositions();
         openedSlot = -1;

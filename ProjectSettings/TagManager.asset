@@ -24,6 +24,14 @@ TagManager:
   - shop_Grenade
   - shop_Shield
   - BulletEnemy
+  - Canvas
+  - HealthSlider
+  - HealthText
+  - GoldText
+  - GrenadeArea
+  - GrenadeRange
+  - ShieldBody
+  - Weapon
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoostSpeed : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     PlayerMovement movement;
     Shooting shooting;
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class BoostSpeed : MonoBehaviour
     // Update is called once per frame
     private void OnEnable()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         movement = player.GetComponent<PlayerMovement>();
         shooting = player.GetComponent<Shooting>();
         //Debug.Log(shooting.attackTimer); 

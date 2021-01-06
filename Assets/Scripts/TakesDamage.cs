@@ -19,7 +19,7 @@ public class TakesDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject bullet = collision.gameObject;
-        if (bullet.CompareTag("bullet"))
+        if (bullet.CompareTag("BulletEnemy"))
         {
             float bulletDamage = bullet.GetComponent<Bullet>().bulletDamage;
             if (slider.value > 0)

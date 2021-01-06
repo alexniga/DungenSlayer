@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExplosiveEnemy : MonoBehaviour
 {
     private float speed = 1;
     private Transform player;
+    private float radius;
+    private Slider slider;
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        collider = GetComponent<Collider2D>();
-        Vector3 boxSize = collider.bounds.size;
-        radius = boxSize.x / 2;
+        slider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        text = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
 
     }
 
@@ -22,17 +25,17 @@ public class ExplosiveEnemy : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         Vector2 objPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        
+        Vector2 playerPos = new Vector2(player.position.x, player.position.y);
+        float distancePlayer = Vector2.Distance(objPos, playerPos);
         Vector3 boxSize = gameObject.GetComponent<Collider2D>().bounds.size;
         float radius = boxSize.x / 2;
-
-        Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-        float distancePlayer = Vector2.Distance(objPos, playerPos);
+        
         if (distancePlayer <= radius * 3)
         {
-            text.text = (int.Parse(text.text) + buffValue).ToString();
-            gameObject.SetActive(false);
-            //Debug.Log("clicked");
-
+            slider.value -= 30f;
+            text.text = slider.value.ToString() + " / 100";
+            Destroy(gameObject);
         }
     }
 

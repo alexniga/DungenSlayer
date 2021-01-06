@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    public List<GameObject> shields;
+
+    private GameObject shield;
     // Start is called before the first frame update
+    private void Start()
+    {
+        
+    }
     private void OnEnable()
     {
-        for (int i = 0; i < shields.Count; i++)
-        {
-            shields[i].SetActive(true);
-        }
+        shield = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        shield.SetActive(true);
     }
 
     private void OnDisable()
     {
-        for (int i = 0; i < shields.Count; i++)
-        {
-            shields[i].SetActive(false);
-        }
+        shield.SetActive(false);
     }
 }
