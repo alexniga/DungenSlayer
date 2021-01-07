@@ -32,6 +32,14 @@ TagManager:
   - GrenadeRange
   - ShieldBody
   - Weapon
+  - ArmorValue
+  - DamageValue
+  - FirePoint
+  - ShieldUp
+  - ShieldDown
+  - ShieldFront
+  - spike
+  - Spike
   layers:
   - Default
   - TransparentFX

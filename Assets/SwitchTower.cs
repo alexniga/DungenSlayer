@@ -1,44 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Buff : MonoBehaviour
+public class SwitchTower : MonoBehaviour
 {
+    public GameObject target;
     private GameObject player;
-    private Text text;
-    private int buffValue;
-    public string name;
-
+    private bool canClick;
+    public bool isNotTower = false;
     // Start is called before the first frame update
     void Start()
     {
+        canClick = true;
         player = GameObject.FindGameObjectWithTag("Player");
-        buffValue = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseOver()
     {
-        if (name.Equals("DamageBuff"))
-        {
-            text = GameObject.FindGameObjectWithTag("DamageValue").GetComponent<Text>();
-
-        }
-        else if(name.Equals("ArmorBuff"))
-        {
-
-            text = GameObject.FindGameObjectWithTag("ArmorValue").GetComponent<Text>();
-            
-        }
-
-        
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && canClick)
         {
             Vector2 objPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
             Vector3 boxSize = gameObject.GetComponent<Collider2D>().bounds.size;
@@ -46,15 +31,19 @@ public class Buff : MonoBehaviour
 
             Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
             float distancePlayer = Vector2.Distance(objPos, playerPos);
-            if (distancePlayer <= radius * 3)
+            if (distancePlayer <= radius * 4)
             {
-                text.text = (int.Parse(text.text) + buffValue).ToString();
-                gameObject.SetActive(false);
-                //Debug.Log("clicked");
-
+                gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                canClick = false;
+                if (!isNotTower)
+                {
+                    target.GetComponent<TowerShooting>().enabled = false;
+                }
+                else
+                {
+                    target.SetActive(false);
+                }
             }
         }
     }
-
-
 }

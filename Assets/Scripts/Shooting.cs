@@ -5,22 +5,26 @@ using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
-    public Transform firePoint;
+    private Transform firePoint;
     public GameObject bulletPrefab;
     public bool shopOpened;
 
-    private float bulletForce = 100f;
-    public Text attackValue;
+    private float bulletForce;
+    private Text attackValue;
 
-    public float attackTimer = 0.35f;
+    public float attackTimer;
     private float currentAttackTimer;
     private bool canAttack;
 
 
     private void Start()
     {
+        attackValue = GameObject.FindGameObjectWithTag("DamageValue").GetComponent<Text>();
+        bulletForce = 100f;
+        attackTimer = 0.35f;
         currentAttackTimer = attackTimer;
         shopOpened = false;
+        firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
     }
 
     // Update is called once per frame
@@ -42,7 +46,6 @@ public class Shooting : MonoBehaviour
         {
             if (canAttack && !shopOpened)
             {
-                Debug.Log(attackTimer);
                 canAttack = false;
                 currentAttackTimer = 0f;
 

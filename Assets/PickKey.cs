@@ -1,20 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Buff : MonoBehaviour
+public class PickKey : MonoBehaviour
 {
     private GameObject player;
-    private Text text;
-    private int buffValue;
-    public string name;
-
+    public GameObject door;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        buffValue = 10;
     }
 
     // Update is called once per frame
@@ -22,22 +17,8 @@ public class Buff : MonoBehaviour
     {
         
     }
-
     private void OnMouseOver()
     {
-        if (name.Equals("DamageBuff"))
-        {
-            text = GameObject.FindGameObjectWithTag("DamageValue").GetComponent<Text>();
-
-        }
-        else if(name.Equals("ArmorBuff"))
-        {
-
-            text = GameObject.FindGameObjectWithTag("ArmorValue").GetComponent<Text>();
-            
-        }
-
-        
         if (Input.GetButtonDown("Fire2"))
         {
             Vector2 objPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
@@ -46,15 +27,14 @@ public class Buff : MonoBehaviour
 
             Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
             float distancePlayer = Vector2.Distance(objPos, playerPos);
-            if (distancePlayer <= radius * 3)
+            if (distancePlayer <= radius * 4)
             {
-                text.text = (int.Parse(text.text) + buffValue).ToString();
+
                 gameObject.SetActive(false);
+                door.SetActive(false);
                 //Debug.Log("clicked");
 
             }
         }
     }
-
-
 }

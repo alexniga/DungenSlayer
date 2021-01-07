@@ -6,22 +6,30 @@ using UnityEngine.UI;
 public class TakesDamage : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Slider slider;
-    public Text text;
-    public Text damageReduction;
+    private Slider slider;
+    private Text healthText;
+
+    private Text damageReduction;
     //private float maxHealth;
 
     private void Start()
     {
+        //slider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        //healthText = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
+        //damageReduction = GameObject.FindGameObjectWithTag("ArmorValue").GetComponent<Text>();
         //maxHealth = 100f;
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject bullet = collision.gameObject;
-        if (bullet.CompareTag("BulletEnemy"))
+        GameObject obj = collision.gameObject;
+        if (obj.CompareTag("Spike"))
         {
-            float bulletDamage = bullet.GetComponent<Bullet>().bulletDamage;
+            Debug.Log("spike");
+        }
+        /*if (obj.CompareTag("BulletEnemy"))
+        {
+            float bulletDamage = obj.GetComponent<Bullet>().bulletDamage;
             if (slider.value > 0)
             {
                 Debug.Log("Hit");
@@ -33,8 +41,17 @@ public class TakesDamage : MonoBehaviour
                 Debug.Log("Dead");
 
             }
-            text.text = slider.value.ToString() + " / 100";
-        }
+            healthText.text = slider.value.ToString() + " / 100";
+        }*/
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject obj = collision.gameObject;
+        if (obj.CompareTag("Spike"))
+        {
+            Debug.Log("spike");
+        }
     }
 }

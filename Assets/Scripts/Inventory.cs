@@ -609,7 +609,7 @@ public class Inventory : MonoBehaviour
 
             //Debug.Log(collider.gameObject.name);
             GameObject item = collider.gameObject;
-            if (item.tag.Equals("shop"))
+            if (item.tag.Equals("Shop"))
             {
                 
                 Vector2 objPos = new Vector2(item.transform.position.x, item.transform.position.y);

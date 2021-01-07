@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class HealthPotion : MonoBehaviour
 {
-    public Slider slider;
-    public Text text;
+    private Slider slider;
+    private Text text;
     private float maxHealth;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,8 @@ public class HealthPotion : MonoBehaviour
 
     private void OnEnable()
     {
+        slider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        text = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
         maxHealth = 100f;
         slider.value = slider.value + 20;
         if (slider.value > maxHealth)
