@@ -40,6 +40,8 @@ TagManager:
   - ShieldFront
   - spike
   - Spike
+  - Enemy
+  - Inventory
   layers:
   - Default
   - TransparentFX

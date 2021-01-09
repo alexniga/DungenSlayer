@@ -28,13 +28,15 @@ public class Inventory : MonoBehaviour
     private Dictionary<string, int> prefabPositions;
     private int openedSlot;
     private List<string> shopItems;
+    private List<string> levelNames;
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         CreateItemList();
         CreatePrefabPositions();
+        level = 0;
+        CreateLevelNames();
         openedSlot = -1;
         startCountDurations = new List<DateTime>();
         for(int i = 1; i<=5;i++)
@@ -79,7 +81,8 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         PerformAction();
 
         PickObject();
@@ -89,6 +92,31 @@ public class Inventory : MonoBehaviour
         ShiftFunctionalities();
 
         Shop();
+
+    }
+    public string CurrentLevel()
+    {
+        Debug.Log(levelNames[level]);
+        return levelNames[level];
+    }
+
+    public string IncreaseLevel()
+    {
+        level++;
+        Debug.Log(levelNames[level]);
+        return levelNames[level];
+    }
+    private void CreateLevelNames()
+    {
+        levelNames = new List<string>();
+        levelNames.Add("puzzle_room_1");
+        levelNames.Add("fight_room_2");
+        levelNames.Add("fight_room_1");
+        levelNames.Add("shop_room_1");
+        levelNames.Add("fight_room_2");
+        levelNames.Add("fight_room_1");
+        levelNames.Add("puzzle_room_2");
+        levelNames.Add("shop_room_2");
 
     }
 

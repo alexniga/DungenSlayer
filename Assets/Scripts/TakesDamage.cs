@@ -14,9 +14,9 @@ public class TakesDamage : MonoBehaviour
 
     private void Start()
     {
-        //slider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
-        //healthText = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
-        //damageReduction = GameObject.FindGameObjectWithTag("ArmorValue").GetComponent<Text>();
+        slider = GameObject.FindGameObjectWithTag("HealthSlider").GetComponent<Slider>();
+        healthText = GameObject.FindGameObjectWithTag("HealthText").GetComponent<Text>();
+        damageReduction = GameObject.FindGameObjectWithTag("ArmorValue").GetComponent<Text>();
         //maxHealth = 100f;
 
     }
@@ -27,22 +27,12 @@ public class TakesDamage : MonoBehaviour
         {
             Debug.Log("spike");
         }
-        /*if (obj.CompareTag("BulletEnemy"))
+        if (obj.CompareTag("BulletEnemy"))
         {
-            float bulletDamage = obj.GetComponent<Bullet>().bulletDamage;
-            if (slider.value > 0)
-            {
-                Debug.Log("Hit");
-                slider.value = slider.value - bulletDamage * (100f - float.Parse(damageReduction.text)) / 100;
-
-            }
-            else
-            {
-                Debug.Log("Dead");
-
-            }
-            healthText.text = slider.value.ToString() + " / 100";
-        }*/
+            Debug.Log(slider);
+            int bulletDamage = obj.GetComponent<Bullet>().bulletDamage;
+            Damage(bulletDamage);
+        }
         
     }
 
@@ -52,6 +42,23 @@ public class TakesDamage : MonoBehaviour
         if (obj.CompareTag("Spike"))
         {
             Debug.Log("spike");
+            Damage(40);
         }
+    }
+
+    private void Damage(int val)
+    {
+        if (slider.value > 0)
+        {
+            Debug.Log("Hit");
+            slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
+
+        }
+        else
+        {
+            Debug.Log("Dead");
+
+        }
+        healthText.text = slider.value.ToString() + " / 100";
     }
 }
