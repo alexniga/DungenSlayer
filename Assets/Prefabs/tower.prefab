@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 6603724030987984671}
   - component: {fileID: 4417692105973959469}
   - component: {fileID: 6539834477759185936}
+  - component: {fileID: 5690850308329585407}
   m_Layer: 8
   m_Name: tower
   m_TagString: Untagged
@@ -127,6 +128,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+--- !u!114 &5690850308329585407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532516923233506175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29510478e7d09f42b6ea27d6e1b1b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 6458133032692110032}
 --- !u!1 &3164250755619444205
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +326,7 @@ GameObject:
   - component: {fileID: 2668767220751379253}
   - component: {fileID: 1599929349522794120}
   - component: {fileID: 3390295007792129935}
+  - component: {fileID: 6458133032692110032}
   m_Layer: 8
   m_Name: healthSlider
   m_TagString: Untagged
@@ -397,6 +412,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6458133032692110032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112228159834273372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257a4af2cd127f241aa612af7ee7dcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 3390295007792129935}
 --- !u!1 &8208302697638076978
 GameObject:
   m_ObjectHideFlags: 0
