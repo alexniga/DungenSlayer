@@ -24,5 +24,10 @@ public class EnemyOneHealth : MonoBehaviour
             health -= 20;
             healthBar.SetHealth(health);
         }
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        } 
     }
 }
