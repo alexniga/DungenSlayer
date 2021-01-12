@@ -9,9 +9,9 @@ public class EnemyTowerHealth : MonoBehaviour
 
     private void Start()
     {
-        healthBar.SetMaxHealth(100);
-        healthBar.SetHealth(100);
-        health = 200;
+        healthBar.SetMaxHealth(300);
+        healthBar.SetHealth(300);
+        health = 300;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
