@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyOneHealth : MonoBehaviour
+public class EnemyTowerHealth : MonoBehaviour
 {
     public HealthBarEnemy healthBar;
     float health;
@@ -11,7 +11,7 @@ public class EnemyOneHealth : MonoBehaviour
     {
         healthBar.SetMaxHealth(100);
         healthBar.SetHealth(100);
-        health = 100;
+        health = 200;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -28,6 +28,6 @@ public class EnemyOneHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
-        } 
+        }
     }
 }
