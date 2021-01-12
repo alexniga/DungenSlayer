@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 4417692105973959469}
   - component: {fileID: 6539834477759185936}
   - component: {fileID: 5690850308329585407}
+  - component: {fileID: 6430442012115880761}
   m_Layer: 8
-  m_Name: tower
+  m_Name: towerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,6 +142,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6458133032692110032}
+--- !u!68 &6430442012115880761
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532516923233506175}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.4971322, y: 2.3478737}
+  - {x: -1.7185619, y: -0.1989723}
+  - {x: -1.5302827, y: -1.9486254}
+  - {x: -0.008313313, y: -2.785615}
+  - {x: 1.3884823, y: -2.1873124}
+  - {x: 2.3397083, y: 0.03153743}
+  - {x: 1.743708, y: 0.8047635}
+  - {x: 2.1509411, y: 2.6412146}
+  - {x: -1.4700336, y: 2.2682858}
 --- !u!1 &3164250755619444205
 GameObject:
   m_ObjectHideFlags: 0
