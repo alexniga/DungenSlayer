@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
@@ -37,6 +38,7 @@ public class Inventory : MonoBehaviour
         CreatePrefabPositions();
         level = 0;
         CreateLevelNames();
+        //SceneManager.LoadScene(levelNames[level], LoadSceneMode.Additive);
         openedSlot = -1;
         startCountDurations = new List<DateTime>();
         for(int i = 1; i<=5;i++)

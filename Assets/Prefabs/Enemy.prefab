@@ -226,6 +226,7 @@ MonoBehaviour:
   distanceToMove: 2
   obj: {fileID: 3468673759697098145}
   EnemyWeapon: {fileID: 2772930328996949375}
+  healthBar: {fileID: 0}
 --- !u!114 &4742892942587085150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +240,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 327181162937365077}
+  healthPrefab: {fileID: 4373043140826062726, guid: 2a4ec0e292fc7bc4b982fa88a2b51991,
+    type: 3}
+  boostPrefab: {fileID: 3640547041152135227, guid: 2b0dfbbf4b2fbc44a9785cf9442f9274,
+    type: 3}
 --- !u!68 &1697586913141566794
 EdgeCollider2D:
   m_ObjectHideFlags: 0
