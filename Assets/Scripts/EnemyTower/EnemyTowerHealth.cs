@@ -6,6 +6,9 @@ public class EnemyTowerHealth : MonoBehaviour
 {
     public HealthBarEnemy healthBar;
     float health;
+    public GameObject shieldPrefab;
+    public GameObject goldPrefab;
+    private int val;
 
     private void Start()
     {
@@ -16,17 +19,24 @@ public class EnemyTowerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("INAMIC LOVIT");
+        //print("INAMIC LOVIT");
 
         if (collision.collider.tag == "Bullet")
         {
-            print("INAMIC LOVIT DE GLONT!");
+            //print("INAMIC LOVIT DE GLONT!");
             health -= 20;
             healthBar.SetHealth(health);
         }
 
         if (health <= 0)
         {
+            val = Random.Range(1, 100);
+            Debug.Log(val);
+            if (val < 40)
+            {
+                Instantiate(shieldPrefab, gameObject.transform.position, gameObject.transform.rotation);
+            }
+            Instantiate(goldPrefab, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(this.gameObject);
         }
     }

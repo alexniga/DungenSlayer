@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6458133032692110032}
+  shieldPrefab: {fileID: 3999291067112802978, guid: d68327bfe68e3b54eb8421d17e1ef081,
+    type: 3}
+  goldPrefab: {fileID: 6717849388034528217, guid: a03fc68ad5c1b5b4bae4520d91bdda3e,
+    type: 3}
 --- !u!68 &6430442012115880761
 EdgeCollider2D:
   m_ObjectHideFlags: 0

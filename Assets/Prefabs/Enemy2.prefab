@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grenadePrefab: {fileID: 4579691323597560651, guid: e03c3ce09d711044885099709d1c5d6e,
     type: 3}
+  goldPrefab: {fileID: 6717849388034528217, guid: a03fc68ad5c1b5b4bae4520d91bdda3e,
+    type: 3}
 --- !u!61 &8993599647905319541
 BoxCollider2D:
   m_ObjectHideFlags: 0

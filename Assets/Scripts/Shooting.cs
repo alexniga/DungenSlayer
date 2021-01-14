@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         attackValue = GameObject.FindGameObjectWithTag("DamageValue").GetComponent<Text>();
-        bulletForce = 100f;
+        bulletForce = 30f;
         attackTimer = 0.35f;
         currentAttackTimer = attackTimer;
         shopOpened = false;

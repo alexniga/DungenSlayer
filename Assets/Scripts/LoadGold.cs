@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadAttack : MonoBehaviour
+public class LoadGold : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         Player player = new Player();
         player.LoadPlayer();
-        player.AttackDamage = 31;
+        player.Money = 205;
         player.SavePlayer();
         Text text = gameObject.GetComponent<Text>();
-        Debug.Log(player.AttackDamage);
+        Debug.Log(player.Money);
         Debug.Log(text);
-        text.text = player.AttackDamage.ToString();
+        text.text = player.Money.ToString();
     }
 
     // Update is called once per frame

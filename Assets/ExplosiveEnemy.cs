@@ -11,6 +11,7 @@ public class ExplosiveEnemy : MonoBehaviour
     private Slider slider;
     private Text text;
     public GameObject grenadePrefab;
+    public GameObject goldPrefab;
     private int val;
 
     // Start is called before the first frame update
@@ -48,10 +49,11 @@ public class ExplosiveEnemy : MonoBehaviour
         {
             val = Random.Range(1, 100);
             Debug.Log(val);
-            if (val < 40)
+            if (val < 30)
             {
                 Instantiate(grenadePrefab, gameObject.transform.position, gameObject.transform.rotation);
             }
+            Instantiate(goldPrefab, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }

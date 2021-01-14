@@ -11,6 +11,8 @@ public class EnemyOneHealth : MonoBehaviour
     private int val;
     public GameObject boostPrefab;
 
+    public GameObject goldPrefab;
+
 
     private void Start()
     {
@@ -40,16 +42,17 @@ public class EnemyOneHealth : MonoBehaviour
         {
             val = Random.Range(1, 100);
             Debug.Log(val);
-            if (val < 40)
+            if (val < 30)
             {
                 Instantiate(healthPrefab, gameObject.transform.position, gameObject.transform.rotation);
             }
             val = Random.Range(1, 100);
             Debug.Log(val);
-            if (val < 40)
+            if (val < 30)
             {
                 Instantiate(boostPrefab, gameObject.transform.position, gameObject.transform.rotation);
             }
+            Instantiate(goldPrefab, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(this.gameObject);
         } 
     }

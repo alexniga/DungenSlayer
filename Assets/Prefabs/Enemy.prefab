@@ -226,7 +226,7 @@ MonoBehaviour:
   distanceToMove: 2
   obj: {fileID: 3468673759697098145}
   EnemyWeapon: {fileID: 2772930328996949375}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 7532618156245798192}
 --- !u!114 &4742892942587085150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +243,8 @@ MonoBehaviour:
   healthPrefab: {fileID: 4373043140826062726, guid: 2a4ec0e292fc7bc4b982fa88a2b51991,
     type: 3}
   boostPrefab: {fileID: 3640547041152135227, guid: 2b0dfbbf4b2fbc44a9785cf9442f9274,
+    type: 3}
+  goldPrefab: {fileID: 6717849388034528217, guid: a03fc68ad5c1b5b4bae4520d91bdda3e,
     type: 3}
 --- !u!68 &1697586913141566794
 EdgeCollider2D:
@@ -298,7 +300,6 @@ RectTransform:
   m_LocalScale: {x: 27.118643, y: 29.09091, z: 1}
   m_Children:
   - {fileID: 1196981828615983201}
-  - {fileID: 4890634463110617935}
   m_Father: {fileID: 3468673759697098148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -392,16 +393,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028542507868687780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.049985, y: 0.010937675, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5215247134904929218}
+  m_Father: {fileID: 1196981828615983201}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.025099948, y: 0.9151003}
+  m_AnchoredPosition: {x: 0.0019996855, y: -0.63083035}
   m_SizeDelta: {x: 30.844189, y: 55.10795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6481941118233612205
@@ -472,6 +473,7 @@ RectTransform:
   m_LocalScale: {x: -0.049985, y: 0.010937675, z: 1}
   m_Children:
   - {fileID: 6899469657373720746}
+  - {fileID: 4890634463110617935}
   m_Father: {fileID: 5215247134904929218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
