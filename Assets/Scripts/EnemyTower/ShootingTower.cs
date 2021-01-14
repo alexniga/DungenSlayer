@@ -11,7 +11,7 @@ public class ShootingTower : MonoBehaviour
     public bool once = true;
 
     private GameObject target;
-    float atackSpeedTime = 2f;
+    float atackSpeedTime = 1.5f;
 
     private void Update()
     {
