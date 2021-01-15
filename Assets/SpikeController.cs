@@ -33,7 +33,7 @@ public class SpikeController : MonoBehaviour
         if ((timer - DateTime.UtcNow).TotalSeconds <= 1 && !state)
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
         if ((timer - DateTime.UtcNow).TotalSeconds <= 0 && !state)
         {
