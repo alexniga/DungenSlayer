@@ -9,6 +9,8 @@ public class Player
     public int AttackDamage { get; set; }
     public int DamageReduction { get; set; }
     public int HighScore { get; set; }
+    public int CostBonusAttack { get; set; }
+    public int CostBonusArmor { get; set; }
 
     public void SavePlayer()
     {
@@ -22,5 +24,7 @@ public class Player
         AttackDamage = data.AttackDamage;
         DamageReduction = data.DamageReduction;
         HighScore = data.HighScore;
+        CostBonusArmor = data.CostBonusArmor;
+        CostBonusAttack = data.CostBonusAttack;
     }
 }

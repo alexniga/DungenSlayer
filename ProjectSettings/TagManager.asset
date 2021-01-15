@@ -42,6 +42,7 @@ TagManager:
   - Spike
   - Enemy
   - Inventory
+  - Pannels
   layers:
   - Default
   - TransparentFX
@@ -52,8 +53,8 @@ TagManager:
   - 
   - 
   - Enemy
-  - 
-  - 
+  - Bullet
+  - BulletEnemy
   - 
   - 
   - 

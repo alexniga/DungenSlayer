@@ -7,10 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class LoadData : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
 
     public void LoadSceneAndData()
     {
@@ -28,13 +24,14 @@ public class LoadData : MonoBehaviour
         {
             LoadThePlayer();
         }
-
+        Time.timeScale = 0f;
         SceneManager.LoadScene("UIScene");
     }
 
     void LoadThePlayer()
     {
-        Player player = new Player() { AttackDamage = 10, DamageReduction = 20, Money = 0 };
+        
+        Player player = new Player() { AttackDamage = 10, DamageReduction = 20, Money = 0 , CostBonusAttack = 500, CostBonusArmor = 500};
         player.SavePlayer();
         print("FISIERUL A FOST CREAT");
     }

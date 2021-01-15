@@ -44,19 +44,32 @@ public class TakesDamage : MonoBehaviour
             Debug.Log("spike");
             Damage(40);
         }
+        if (obj.CompareTag("Fire"))
+        {
+            Debug.Log("Fire");
+            Damage(99999);
+        }
+
     }
 
     private void Damage(int val)
     {
+        slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
         if (slider.value > 0)
         {
             Debug.Log("Hit");
-            slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
+
 
         }
         else
         {
+            GameObject.FindGameObjectWithTag("Pannels").transform.GetChild(0).gameObject.SetActive(true);
+            Player player = new Player();
+            player.LoadPlayer();
+            player.Money = int.Parse(GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>().text.ToString());
+            player.SavePlayer();
             Debug.Log("Dead");
+            Time.timeScale = 0f;
 
         }
         healthText.text = slider.value.ToString() + " / 100";
