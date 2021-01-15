@@ -1961,9 +1961,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1142988560}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 600214978}
+        m_MethodName: HoverSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1972,9 +1972,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1748062721}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 600214978}
+        m_MethodName: ClickSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3151,7 +3151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1142988561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3180,6 +3180,7 @@ RectTransform:
   - {fileID: 635516325}
   - {fileID: 600214974}
   - {fileID: 1476981095}
+  - {fileID: 1524767366}
   m_Father: {fileID: 670872389}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3688,7 +3689,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1358554649}
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -3703,7 +3704,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1358554649}
           m_MethodName: ClickSound
           m_Mode: 1
           m_Arguments:
@@ -4322,6 +4323,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481336215}
+  m_CullTransparentMesh: 0
+--- !u!1 &1524767365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524767366}
+  - component: {fileID: 1524767368}
+  - component: {fileID: 1524767367}
+  m_Layer: 5
+  m_Name: Help (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1524767366
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524767365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1142988562}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 74, y: 39}
+  m_SizeDelta: {x: 312.26312, y: 80.99365}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1524767367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524767365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.509434, g: 0.026432898, b: 0.026432898, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 85
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1524767368
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524767365}
   m_CullTransparentMesh: 0
 --- !u!1 &1536920963
 GameObject:
@@ -5213,7 +5292,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1622063619}
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -5228,7 +5307,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1622063619}
           m_MethodName: ClickSound
           m_Mode: 1
           m_Arguments:
@@ -5500,7 +5579,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1627809596}
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -5515,7 +5594,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1627809596}
           m_MethodName: ClickSound
           m_Mode: 1
           m_Arguments:
@@ -5730,7 +5809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1748062722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6339,7 +6418,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1828797508}
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -6354,7 +6433,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1828797508}
           m_MethodName: ClickSound
           m_Mode: 1
           m_Arguments:
@@ -7209,7 +7288,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1997863047}
           m_MethodName: HoverSound
           m_Mode: 1
           m_Arguments:
@@ -7224,7 +7303,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546771138}
+        - m_Target: {fileID: 1997863047}
           m_MethodName: ClickSound
           m_Mode: 1
           m_Arguments:
