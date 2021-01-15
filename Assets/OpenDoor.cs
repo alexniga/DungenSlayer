@@ -8,13 +8,14 @@ public class OpenDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
         count = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        print(count);
         if(count == 0)
         {
             gameObject.SetActive(false);
