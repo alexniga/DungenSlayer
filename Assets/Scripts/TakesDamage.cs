@@ -44,14 +44,21 @@ public class TakesDamage : MonoBehaviour
             Debug.Log("spike");
             Damage(40);
         }
+        if (obj.CompareTag("Fire"))
+        {
+            Debug.Log("Fire");
+            Damage(99999);
+        }
+
     }
 
     private void Damage(int val)
     {
+        slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
         if (slider.value > 0)
         {
             Debug.Log("Hit");
-            slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
+            
 
         }
         else

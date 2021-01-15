@@ -35,13 +35,10 @@ TagManager:
   - ArmorValue
   - DamageValue
   - FirePoint
-  - ShieldUp
-  - ShieldDown
-  - ShieldFront
-  - spike
   - Spike
   - Enemy
   - Inventory
+  - Fire
   layers:
   - Default
   - TransparentFX
