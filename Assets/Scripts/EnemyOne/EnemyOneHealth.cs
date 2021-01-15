@@ -33,8 +33,9 @@ public class EnemyOneHealth : MonoBehaviour
 
         if (collision.collider.tag == "Bullet")
         {
-            //print("INAMIC LOVIT DE GLONT!");
-            health -= 20;
+            Player player = new Player();
+            player.LoadPlayer();
+            health -= player.AttackDamage;
             healthBar.SetHealth(health);
         }
 

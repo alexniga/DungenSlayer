@@ -58,12 +58,18 @@ public class TakesDamage : MonoBehaviour
         if (slider.value > 0)
         {
             Debug.Log("Hit");
-            
+
 
         }
         else
         {
+            GameObject.FindGameObjectWithTag("Pannels").transform.GetChild(0).gameObject.SetActive(true);
+            Player player = new Player();
+            player.LoadPlayer();
+            player.Money = int.Parse(GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>().text.ToString());
+            player.SavePlayer();
             Debug.Log("Dead");
+            Time.timeScale = 0f;
 
         }
         healthText.text = slider.value.ToString() + " / 100";

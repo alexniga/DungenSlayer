@@ -38,6 +38,7 @@ TagManager:
   - Spike
   - Enemy
   - Inventory
+  - Pannels
   - Fire
   layers:
   - Default
@@ -49,8 +50,8 @@ TagManager:
   - 
   - 
   - Enemy
-  - 
-  - 
+  - Bullet
+  - BulletEnemy
   - 
   - 
   - 

@@ -11,10 +11,10 @@ public class MoveEnemyControledRandom : MonoBehaviour
     public float distanceToMove = 1f;
     float movingTimer;
 
-    float limitUpY = 3.5f;
-    float limitDownY = -3.5f;
+    float limitUpY = 3.4f;
+    float limitDownY = -3f;
 
-    float limitLeftX = -6f;
+    float limitLeftX = -4f;
     float limitRightX = 6f;
 
     Vector2 lastPosition;
@@ -35,7 +35,7 @@ public class MoveEnemyControledRandom : MonoBehaviour
         speed = 0.7f;
         distanceToMove = 2f;
         EnemyWeapon.SetActive(false);
-        healthBar.SetActive(false);
+        healthBar.SetActive(true);
     }
 
     private void Update()

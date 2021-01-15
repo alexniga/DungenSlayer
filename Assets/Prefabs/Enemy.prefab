@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6899469657373720746}
   - component: {fileID: 6575652422576080621}
   - component: {fileID: 6859968671240574965}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683477588249788051}
   - component: {fileID: 5528816416589346453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -136,9 +136,9 @@ GameObject:
   - component: {fileID: 3468673759697098146}
   - component: {fileID: 4742892942587085150}
   - component: {fileID: 1697586913141566794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,8 +151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3468673759697098145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91, y: 0.667, z: 0}
-  m_LocalScale: {x: 0.036875002, y: 0.034375, z: 1}
+  m_LocalPosition: {x: -1.9154, y: 0.62304, z: 0}
+  m_LocalScale: {x: 0.02396875, y: 0.020195313, z: 1}
   m_Children:
   - {fileID: 683477588249788051}
   - {fileID: 5215247134904929218}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 6236173945368468691}
   - component: {fileID: 7614683482109158244}
   - component: {fileID: 5771510077411825218}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 4890634463110617935}
   - component: {fileID: 6481941118233612205}
   - component: {fileID: 1478863379688287252}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 4074346233662468028}
   - component: {fileID: 7655732344909533469}
   - component: {fileID: 327181162937365077}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: healthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9135807372731757903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RealBareelToShoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

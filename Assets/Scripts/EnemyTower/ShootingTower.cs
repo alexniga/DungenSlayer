@@ -20,12 +20,14 @@ public class ShootingTower : MonoBehaviour
 
         transform.LookAt(target.transform);
         transform.right = target.transform.position - transform.position;
-
+        
         atackSpeedTime -= Time.deltaTime;
         if (atackSpeedTime <= 0f)
         {
+            var rotation = transform.rotation;
+            rotation.y = 0;
             print("SHOOTING");
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
             Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
             rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
             atackSpeedTime = 2f;

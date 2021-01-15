@@ -7,7 +7,7 @@ public class TowerShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    public float bulletForce = 50f;
+    public float bulletForce = 10f;
 
     public float attackTimer = 0.1f;
     private float currentAttackTimer;

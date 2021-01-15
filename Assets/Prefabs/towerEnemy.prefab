@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6430442012115880761}
   m_Layer: 8
   m_Name: towerEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532516923233506175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.58, y: -2.885, z: 0}
-  m_LocalScale: {x: 0.29062665, y: 0.32342985, z: 1}
+  m_LocalPosition: {x: 1.5626, y: -2.3611, z: 0}
+  m_LocalScale: {x: 0.20343865, y: 0.19810079, z: 1}
   m_Children:
   - {fileID: 4731405442995972798}
   - {fileID: 3116762672979435034}
@@ -553,14 +553,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8678847932116243601}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.78, z: 0}
-  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 1}
+  m_LocalRotation: {x: 0.000000020438195, y: 0.000000022008878, z: 0.7327706, w: 0.6804758}
+  m_LocalPosition: {x: 0, y: -0.78, z: 0}
+  m_LocalScale: {x: 0.007625624, y: 0.0072034993, z: 0.14407}
   m_Children:
   - {fileID: 7562564818775225111}
   m_Father: {fileID: 6603724030987984671}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 94.23801}
 --- !u!114 &6619470622549247016
 MonoBehaviour:
   m_ObjectHideFlags: 0
