@@ -3621,7 +3621,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792637955}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4af052c4dff844e4ab0a654b147d6609, type: 3}
   m_Name: 
@@ -6300,9 +6300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799538454760e5940a597c87fdf736ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackText: {fileID: 2134541457}
-  armorText: {fileID: 792637957}
-  goldText: {fileID: 358449685}
   shopBg: {fileID: 1469794101}
   gold: {fileID: 358449685}
   shopTitle: {fileID: 299848346}

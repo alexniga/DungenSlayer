@@ -9,8 +9,8 @@ public class LoadAttack : MonoBehaviour
     void Start()
     {
         Player player = new Player();
-        //player.LoadPlayer();
-        player.AttackDamage = 31;
+        player.LoadPlayer();
+        //player.AttackDamage = 31;
         //player.SavePlayer();
         Debug.Log(player.AttackDamage);
         

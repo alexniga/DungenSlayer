@@ -24,10 +24,11 @@ public class ShootingEnemyIInvisible : MonoBehaviour
 
                 transform.LookAt(target.transform);
                 transform.right = target.transform.position - transform.position;
-
+                var rotation = transform.rotation;
+                rotation.y = 0;
                 print("SHOOTING");
                 once = false;
-                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
                 Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
                 rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
             }
