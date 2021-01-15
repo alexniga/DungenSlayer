@@ -9,9 +9,9 @@ public class LoadArmor : MonoBehaviour
     void Start()
     {
         Player player = new Player();
-        player.LoadPlayer();
+        //player.LoadPlayer();
         player.DamageReduction = 31;
-        player.SavePlayer();
+        //player.SavePlayer();
         Text text = gameObject.GetComponent<Text>();
         text.text = player.DamageReduction.ToString();
     }

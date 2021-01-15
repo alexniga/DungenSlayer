@@ -9,12 +9,11 @@ public class LoadGold : MonoBehaviour
     void Start()
     {
         Player player = new Player();
-        player.LoadPlayer();
+        //player.LoadPlayer();
         player.Money = 205;
-        player.SavePlayer();
+        //player.SavePlayer();
         Text text = gameObject.GetComponent<Text>();
         Debug.Log(player.Money);
-        Debug.Log(text);
         text.text = player.Money.ToString();
     }
 

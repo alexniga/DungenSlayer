@@ -9,12 +9,13 @@ public class LoadAttack : MonoBehaviour
     void Start()
     {
         Player player = new Player();
-        player.LoadPlayer();
+        //player.LoadPlayer();
         player.AttackDamage = 31;
-        player.SavePlayer();
-        Text text = gameObject.GetComponent<Text>();
+        //player.SavePlayer();
         Debug.Log(player.AttackDamage);
-        Debug.Log(text);
+        
+        Text text = gameObject.GetComponent<Text>();
+        
         text.text = player.AttackDamage.ToString();
     }
 

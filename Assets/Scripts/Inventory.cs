@@ -96,6 +96,7 @@ public class Inventory : MonoBehaviour
         Shop();
 
     }
+    
     public string CurrentLevel()
     {
         Debug.Log(levelNames[level]);
