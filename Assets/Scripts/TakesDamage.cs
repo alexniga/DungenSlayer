@@ -59,10 +59,11 @@ public class TakesDamage : MonoBehaviour
         {
             Debug.Log("Hit");
 
-
+            healthText.text = slider.value.ToString() + " / 100";
         }
         else
         {
+            healthText.text = slider.value.ToString() + " / 100";
             GameObject.FindGameObjectWithTag("Pannels").transform.GetChild(0).gameObject.SetActive(true);
             Player player = new Player();
             player.LoadPlayer();
@@ -72,6 +73,6 @@ public class TakesDamage : MonoBehaviour
             Time.timeScale = 0f;
 
         }
-        healthText.text = slider.value.ToString() + " / 100";
+        
     }
 }

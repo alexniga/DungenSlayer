@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,18 +12,51 @@ public class DragonHealth : MonoBehaviour
     private List<int> end;
     private List<bool> state;
     private int val;
+    private int nr;
+    private DateTime timer;
+    private int opened;
 
     private void Start()
     {
-        healthBar.SetMaxHealth(300);
-        healthBar.SetHealth(300);
-        health = 2000;
-        val = 200;
-        for(int i = 0; i < 20; i++)
+        
+        nr = 10;
+        health = nr * 100;
+        val = nr * 10;
+        start = new List<int>();
+        end = new List<int>();
+        state = new List<bool>();
+        healthBar.SetMaxHealth(health);
+        healthBar.SetHealth(health);
+        for (int i = 0; i < nr - 1; i++)
         {
             start.Add(i * val);
             end.Add(i * val + val);
             state.Add(true);
+        }
+        /*for (int i = 0; i < nr - 1; i++)
+        {
+            print(start[i]);
+            print(end[i]);
+            print(state[i]);
+        }*/
+
+    }
+
+    private void Update()
+    {
+        if (opened==1 && (timer - DateTime.UtcNow).TotalSeconds < 0)
+        {
+            opened = 2;
+            fire.GetComponent<Collider2D>().enabled = true;
+            fire.GetComponent<SpriteRenderer>().color= Color.red;
+            timer = DateTime.UtcNow.AddSeconds(2);
+            print(opened);
+            
+        }
+        if (opened == 2 && (timer - DateTime.UtcNow).TotalSeconds < 0)
+        {
+            opened = 0;
+            fire.SetActive(false);
         }
     }
 
@@ -33,17 +67,25 @@ public class DragonHealth : MonoBehaviour
         if (collision.collider.tag == "Bullet")
         {
             //print("INAMIC LOVIT DE GLONT!");
-            health -= 40;
+            health -= 70;
             healthBar.SetHealth(health);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < nr; i++)
             {
-                if(health>=start[i] && health<end[i] && state[i] == true)
+                if (health>=start[i] && health<end[i] && state[i] == true)
                 {
+                    
                     state[i] = false;
                     fire.SetActive(true);
+                    opened = 1;
+                    timer = DateTime.UtcNow.AddSeconds(2);
+                    fire.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    fire.GetComponent<Collider2D>().enabled = false;
+                    break;
                 }
             }
+            
         }
+        
 
         if (health <= 0)
         {
