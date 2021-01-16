@@ -93,4 +93,9 @@ public class DragonHealth : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    public void GrenadeDamage()
+    {
+        health -= 50;
+        healthBar.SetHealth(health);
+    }
 }

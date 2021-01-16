@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
         CreatePrefabPositions();
         level = 0;
         CreateLevelNames();
-        SceneManager.LoadScene(levelNames[level], LoadSceneMode.Additive);
+        //SceneManager.LoadScene(levelNames[level], LoadSceneMode.Additive);
         openedSlot = -1;
         startCountDurations = new List<DateTime>();
         for(int i = 1; i<=5;i++)
@@ -112,14 +112,22 @@ public class Inventory : MonoBehaviour
     private void CreateLevelNames()
     {
         levelNames = new List<string>();
+        levelNames.Add("VideoBeforeInitial");
+        levelNames.Add("VideoBeforeMaze1");
         levelNames.Add("puzzle_room_1");
+        levelNames.Add("VideoBeforeFight2");
         levelNames.Add("fight_room_2");
+        levelNames.Add("VideoBeforeFight1");
         levelNames.Add("fight_room_1");
+        levelNames.Add("VideoBeforeWizard1");
         levelNames.Add("shop_room_1");
         levelNames.Add("fight_room_2");
+        levelNames.Add("VideoBeforeMaze2");
         levelNames.Add("puzzle_room_2");
         levelNames.Add("fight_room_1");
+        levelNames.Add("VideoBeforeWizard2");
         levelNames.Add("shop_room_2");
+        levelNames.Add("VideoBeforeBoss");
 
     }
 

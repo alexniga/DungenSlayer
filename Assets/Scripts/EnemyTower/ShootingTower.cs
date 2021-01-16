@@ -26,7 +26,7 @@ public class ShootingTower : MonoBehaviour
         {
             var rotation = transform.rotation;
             rotation.y = 0;
-            print("SHOOTING");
+            //print("SHOOTING");
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
             Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
             rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);

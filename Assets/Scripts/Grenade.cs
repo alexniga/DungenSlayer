@@ -16,6 +16,7 @@ public class Grenade : CancelableItem
     private DateTime timer;
     private int state = 0;
     private float radius;
+    public GameObject explosionPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +51,7 @@ public class Grenade : CancelableItem
         }
         if (state == 1 && (DateTime.UtcNow - timer).TotalSeconds >= 0)
         {
-            Debug.Log("Boom");
+            //Debug.Log("Boom");
             isUsed = true;
             state = 0;
         }
@@ -66,6 +67,7 @@ public class Grenade : CancelableItem
         radius = boxSize.x / 2;
         grenadeRange.SetActive(true);
         grenadeArea.SetActive(true);
+        
         isCanceled = false;
         isUsed = false;
     }
@@ -80,10 +82,34 @@ public class Grenade : CancelableItem
     void AreaDamageEnemies()
     {
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(mousePos, radius);
+        var position = grenadeArea.transform.position;
+        position.z = 0;
+        GameObject obj = Instantiate(explosionPrefab, position, grenadeArea.transform.rotation);
         foreach (Collider2D col in objectsInRange)
         {
-            String enemy = col.gameObject.name;
-            Debug.Log(enemy);
+            GameObject enemy = col.gameObject;
+            if (enemy.CompareTag("Enemy"))
+            {
+                if (enemy.name.Equals("Enemy"))
+                {
+                    enemy.GetComponent<EnemyOneHealth>().GrenadeDamage();
+                }
+                else if (enemy.name.Equals("towerEnemy"))
+                {
+                    enemy.GetComponent<EnemyTowerHealth>().GrenadeDamage();
+                }
+                else if (enemy.name.Equals("Dragon"))
+                {
+                    enemy.GetComponent<DragonHealth>().GrenadeDamage();
+                }
+                else if (enemy.name.Equals("Enemy2"))
+                {
+                    Destroy(enemy);
+                }
+
+                //Debug.Log(enemy.name);
+            }
+            
 
         }
     }

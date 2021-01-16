@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour
+public class MangeCutScenes : MonoBehaviour
 {
-    // Start is called before the first frame update
     private string nextLevelName;
     private string currentLevelName;
+    public int delay;
     private void Start()
     {
         currentLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().CurrentLevel();
         nextLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().IncreaseLevel();
+        StartCoroutine("ChangeTheScene");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    IEnumerator ChangeTheScene()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-
-            SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync(currentLevelName);
-        }
+        print(delay);
+        yield return new WaitForSeconds(delay);
+        print(nextLevelName);
+        print(currentLevelName);
+        SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(currentLevelName);
     }
-    
 }
+

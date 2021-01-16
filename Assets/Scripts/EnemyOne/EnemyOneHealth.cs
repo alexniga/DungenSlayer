@@ -30,7 +30,7 @@ public class EnemyOneHealth : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //print("INAMIC LOVIT");
-
+        print(collision);
         if (collision.collider.tag == "Bullet")
         {
             Player player = new Player();
@@ -38,6 +38,7 @@ public class EnemyOneHealth : MonoBehaviour
             health -= player.AttackDamage;
             healthBar.SetHealth(health);
         }
+        
 
         if (health <= 0)
         {
@@ -58,6 +59,10 @@ public class EnemyOneHealth : MonoBehaviour
         } 
     }
 
-    
+    public void GrenadeDamage()
+    {
+        health -= 50;
+        healthBar.SetHealth(health);
+    }
 
 }
