@@ -78,7 +78,7 @@ public class DragonHealth : MonoBehaviour
                     fire.SetActive(true);
                     opened = 1;
                     timer = DateTime.UtcNow.AddSeconds(2);
-                    fire.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    fire.GetComponent<SpriteRenderer>().color = new Color(1f,1f,0f,0.2f);
                     fire.GetComponent<Collider2D>().enabled = false;
                     break;
                 }
