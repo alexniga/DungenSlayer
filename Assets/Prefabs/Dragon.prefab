@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2111673228}
   - component: {fileID: 2111673227}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Fire
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2111673226
 Transform:
   m_ObjectHideFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111673225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.620691, y: -10.548331, z: 0}
-  m_LocalScale: {x: 9.844874, y: 1.6293858, z: 1}
+  m_LocalPosition: {x: -27.7, y: -1.645, z: 0}
+  m_LocalScale: {x: 6, y: 0.8844098, z: 1}
   m_Children: []
   m_Father: {fileID: 7315209938572435247}
   m_RootOrder: 2
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9edc09a286805104bb7bd5b82e60761f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 545ab79c0a3f8fa4d95cd5dd1d02790f, type: 3}
+  m_Color: {r: 0.9245283, g: 0.004360993, b: 0.030583203, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,14 +99,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 9.4, y: 2.95}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 9.4, y: 2.95}
   m_EdgeRadius: 0
 --- !u!1 &1569594521900996061
 GameObject:
@@ -218,9 +218,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7315209938572435247}
   - component: {fileID: 247477229663783709}
-  - component: {fileID: 7269887749653251104}
-  - component: {fileID: 8131260804869896911}
   - component: {fileID: 7429945815265823497}
+  - component: {fileID: 6210524676156036080}
   m_Layer: 8
   m_Name: Dragon
   m_TagString: Untagged
@@ -237,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 4125893173262947151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.67, y: 0.58, z: 0}
-  m_LocalScale: {x: 0.29062665, y: 0.32342985, z: 1}
+  m_LocalScale: {x: 0.8923704, y: 0.99938345, z: 0.953614}
   m_Children:
   - {fileID: 9189780326646573710}
   - {fileID: 1540525233119256106}
@@ -284,7 +283,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 787242789fdd65d47b9605c301c802bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50419d523b37dff4bb5f0bcc08c65b5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,36 +294,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7269887749653251104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4125893173262947151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb487519d38647408bec7b7deab934c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.1
---- !u!114 &8131260804869896911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4125893173262947151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29510478e7d09f42b6ea27d6e1b1b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 7475440383639409376}
-  shieldPrefab: {fileID: 3999291067112802978, guid: d68327bfe68e3b54eb8421d17e1ef081,
-    type: 3}
-  goldPrefab: {fileID: 6717849388034528217, guid: a03fc68ad5c1b5b4bae4520d91bdda3e,
-    type: 3}
 --- !u!68 &7429945815265823497
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -341,15 +310,34 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.4971322, y: 2.3478737}
+  - {x: -1.1252532, y: 1.6837583}
   - {x: -1.7185619, y: -0.1989723}
+  - {x: -3.6348777, y: -1.8388602}
+  - {x: -3.0463972, y: -2.147079}
   - {x: -1.5302827, y: -1.9486254}
+  - {x: -1.625932, y: -2.4528513}
   - {x: -0.008313313, y: -2.785615}
   - {x: 1.3884823, y: -2.1873124}
+  - {x: 2.6172495, y: -1.98391}
   - {x: 2.3397083, y: 0.03153743}
   - {x: 1.743708, y: 0.8047635}
+  - {x: 3.718688, y: 0.5694357}
   - {x: 2.1509411, y: 2.6412146}
-  - {x: -1.4700336, y: 2.2682858}
+  - {x: -0.991904, y: 1.699044}
+--- !u!114 &6210524676156036080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125893173262947151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26cf1cefd8e565428f36b33623d9496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 7475440383639409376}
+  fire: {fileID: 2111673225}
 --- !u!1 &4400992734141369291
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +384,7 @@ GameObject:
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9189780326646573710
 Transform:
   m_ObjectHideFlags: 0
@@ -465,8 +453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.16032, y: -0.84732}
-  m_SizeDelta: {x: 27.266106, y: 14.7786255}
+  m_AnchoredPosition: {x: -0.02, y: -1.455}
+  m_SizeDelta: {x: 25.736351, y: 6.6009502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2888474145941399224
 CanvasRenderer:
@@ -573,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1599, y: -0.8719}
-  m_SizeDelta: {x: 30.844189, y: 55.10795}
+  m_AnchoredPosition: {x: -0.02, y: -1.4660007}
+  m_SizeDelta: {x: 29.11369, y: 24.61425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &736587611938140702
 CanvasRenderer:
