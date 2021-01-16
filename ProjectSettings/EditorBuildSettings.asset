@@ -4,29 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/LoadScreen.unity
-    guid: 822fa03915eb03b4b985a4ee3b476a77
-  - enabled: 1
-    path: Assets/Scenes/UIScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/puzzle_room_1.unity
-    guid: c33990c778b1cfb4f87f436f1274ab61
-  - enabled: 1
-    path: Assets/Scenes/fight_room_2.unity
-    guid: d8162c17f8e26844291e6b86a84b5207
-  - enabled: 1
-    path: Assets/Scenes/fight_room_1.unity
-    guid: 66f877abebf31ea49a05cef248998841
-  - enabled: 1
-    path: Assets/Scenes/puzzle_room_2.unity
-    guid: aa5d5913f40d72347ac47203e168aef5
-  - enabled: 1
-    path: Assets/Scenes/shop_room_2.unity
-    guid: 562f13137f9105e43893d7e91dd85fed
-  - enabled: 1
-    path: Assets/Scenes/shop_room_1.unity
-    guid: d7003b03897f68544ba477904fe42d15
+  m_Scenes: [{enabled: 1, path: Assets/Scenes/LoadScreen.unity, guid: 822fa03915eb03b4b985a4ee3b476a77},
+    {enabled: 1, path: Assets/Scenes/UIScene.unity, guid: 2cda990e2423bbf4892e6590ba056729},
+    {enabled: 1, path: Assets/Scenes/puzzle_room_1.unity, guid: c33990c778b1cfb4f87f436f1274ab61},
+    {enabled: 1, path: Assets/Scenes/fight_room_2.unity, guid: d8162c17f8e26844291e6b86a84b5207},
+    {enabled: 1, path: Assets/Scenes/fight_room_1.unity, guid: 66f877abebf31ea49a05cef248998841},
+    {enabled: 1, path: Assets/Scenes/puzzle_room_2.unity, guid: aa5d5913f40d72347ac47203e168aef5},
+    {enabled: 1, path: Assets/Scenes/shop_room_2.unity, guid: 562f13137f9105e43893d7e91dd85fed},
+    {enabled: 1, path: Assets/Scenes/shop_room_1.unity, guid: d7003b03897f68544ba477904fe42d15},
+    {enabled: 1, path: Assets/Scenes/Menu.unity, guid: 39b8c873c33852246b03b95ee61e43e1},
+    {enabled: 1, path: Assets/Scenes/Alex.unity, guid: d72f497f8deaf7b47bef26b0fa05dc55}]
   m_configObjects: {}
