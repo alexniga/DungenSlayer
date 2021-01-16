@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DragonHealth : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class DragonHealth : MonoBehaviour
     private int nr;
     private DateTime timer;
     private int opened;
+    private string nextLevelName;
+    private string currentLevelName;
 
     private void Start()
     {
@@ -86,11 +89,13 @@ public class DragonHealth : MonoBehaviour
             
         }
         
-
         if (health <= 0)
         {
-            
-            Destroy(this.gameObject);
+            currentLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().CurrentLevel();
+            nextLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().IncreaseLevel();
+            Destroy(gameObject);
+            SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(currentLevelName);
         }
     }
     public void GrenadeDamage()

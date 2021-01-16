@@ -35,7 +35,7 @@ public class Grenade : CancelableItem
         grenadeArea.transform.position = new Vector3(mousePos.x, mousePos.y, grenadeArea.transform.position.z);
         if (distancePlayer >= range)
         {
-            Debug.Log("Out of range");
+            //Debug.Log("Out of range");
             //gameObject.GetComponent<Grenade>().enabled = false;
             isCanceled = true;
         }
@@ -87,27 +87,29 @@ public class Grenade : CancelableItem
         GameObject obj = Instantiate(explosionPrefab, position, grenadeArea.transform.rotation);
         foreach (Collider2D col in objectsInRange)
         {
+
             GameObject enemy = col.gameObject;
+            Debug.Log(enemy.name);
             if (enemy.CompareTag("Enemy"))
             {
-                if (enemy.name.Equals("Enemy"))
+                //Debug.Log(enemy.name);
+                
+                if (enemy.GetComponent<EnemyOneHealth>())
                 {
                     enemy.GetComponent<EnemyOneHealth>().GrenadeDamage();
-                }
-                else if (enemy.name.Equals("towerEnemy"))
-                {
-                    enemy.GetComponent<EnemyTowerHealth>().GrenadeDamage();
-                }
-                else if (enemy.name.Equals("Dragon"))
+                } 
+                else if (enemy.GetComponent<DragonHealth>())
                 {
                     enemy.GetComponent<DragonHealth>().GrenadeDamage();
                 }
-                else if (enemy.name.Equals("Enemy2"))
+                else if (enemy.GetComponent<EnemyTowerHealth>())
+                {
+                    enemy.GetComponent<EnemyTowerHealth>().GrenadeDamage();
+                }
+                else
                 {
                     Destroy(enemy);
                 }
-
-                //Debug.Log(enemy.name);
             }
             
 

@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VideoBeforeBoss.unity
     guid: 151ac31b5a4f08a49a6984ce371432ef
+  - enabled: 1
+    path: Assets/Scenes/VideoBeforeEnd.unity
+    guid: 68b1aa31a3745a345827ac646d36a187
   m_configObjects: {}
