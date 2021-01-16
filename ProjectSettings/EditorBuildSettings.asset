@@ -66,6 +66,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 39b8c873c33852246b03b95ee61e43e1
   - enabled: 1
+    path: Assets/Scenes/boss_fight.unity
+    guid: 3e04cc753cb1d8445b750bffda7a5581
+  - enabled: 1
     path: Assets/Scenes/VideoBeforeFight1.unity
     guid: 659b62e63de857b47851fc6fd951af5b
   - enabled: 1
