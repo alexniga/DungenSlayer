@@ -129,6 +129,7 @@ public class Inventory : MonoBehaviour
         levelNames.Add("shop_room_2");
         levelNames.Add("VideoBeforeBoss");
         levelNames.Add("boss_fight");
+        levelNames.Add("VideoBeforeEnd");
 
     }
 
