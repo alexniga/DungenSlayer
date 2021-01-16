@@ -7,6 +7,6 @@ public class GoToMainMenuButton : MonoBehaviour
 {
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("LoadScreen");
+        SceneManager.LoadScene("Menu");
     }
 }

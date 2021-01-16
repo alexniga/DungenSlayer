@@ -24,14 +24,14 @@ public class LoadData : MonoBehaviour
         {
             LoadThePlayer();
         }
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("UIScene");
     }
 
     void LoadThePlayer()
     {
         
-        Player player = new Player() { AttackDamage = 10, DamageReduction = 20, Money = 0 , CostBonusAttack = 500, CostBonusArmor = 500};
+        Player player = new Player() { AttackDamage = 10, DamageReduction = 20, Money = 0 , CostBonusAttack = 200, CostBonusArmor = 200};
         player.SavePlayer();
         print("FISIERUL A FOST CREAT");
     }
