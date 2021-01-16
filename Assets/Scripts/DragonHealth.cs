@@ -23,8 +23,8 @@ public class DragonHealth : MonoBehaviour
     {
         
         nr = 10;
-        health = nr * 100;
-        val = nr * 10;
+        health = nr * 300;
+        val = nr * 30;
         start = new List<int>();
         end = new List<int>();
         state = new List<bool>();
@@ -53,13 +53,23 @@ public class DragonHealth : MonoBehaviour
             fire.GetComponent<Collider2D>().enabled = true;
             fire.GetComponent<SpriteRenderer>().color= Color.red;
             timer = DateTime.UtcNow.AddSeconds(1);
-            print(opened);
+            //print(opened);
             
         }
         if (opened == 2 && (timer - DateTime.UtcNow).TotalSeconds < 0)
         {
             opened = 0;
             fire.SetActive(false);
+        }
+
+        if (health <= 0)
+        {
+            print("AM INTRAT AICI");
+            currentLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().CurrentLevel();
+            nextLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().IncreaseLevel();
+            Destroy(gameObject);
+            SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(currentLevelName);
         }
     }
 
@@ -70,8 +80,11 @@ public class DragonHealth : MonoBehaviour
         if (collision.collider.tag == "Bullet")
         {
             //print("INAMIC LOVIT DE GLONT!");
-            health -= 70;
+            Player player = new Player();
+            player.LoadPlayer();
+            health -= player.AttackDamage;
             healthBar.SetHealth(health);
+
             for (int i = 0; i < nr; i++)
             {
                 if (health>=start[i] && health<end[i] && state[i] == true)
@@ -88,15 +101,7 @@ public class DragonHealth : MonoBehaviour
             }
             
         }
-        
-        if (health <= 0)
-        {
-            currentLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().CurrentLevel();
-            nextLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().IncreaseLevel();
-            Destroy(gameObject);
-            SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync(currentLevelName);
-        }
+       
     }
     public void GrenadeDamage()
     {
