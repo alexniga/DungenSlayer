@@ -24,7 +24,7 @@ public class LoadData : MonoBehaviour
         {
             LoadThePlayer();
         }
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("UIScene");
     }
 

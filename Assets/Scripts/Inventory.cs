@@ -112,13 +112,20 @@ public class Inventory : MonoBehaviour
     private void CreateLevelNames()
     {
         levelNames = new List<string>();
+        levelNames.Add("VideoBeforeInitial");
+        levelNames.Add("VideoBeforeMaze1");
         levelNames.Add("puzzle_room_1");
+        levelNames.Add("VideoBeforeFight2");
         levelNames.Add("fight_room_2");
+        levelNames.Add("VideoBeforeFight1");
         levelNames.Add("fight_room_1");
+        levelNames.Add("VideoBeforeWizard1");
         levelNames.Add("shop_room_1");
         levelNames.Add("fight_room_2");
+        levelNames.Add("VideoBeforeMaze2");
         levelNames.Add("puzzle_room_2");
         levelNames.Add("fight_room_1");
+        levelNames.Add("VideoBeforeWizard2");
         levelNames.Add("shop_room_2");
 
     }
