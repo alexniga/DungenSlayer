@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -49,5 +50,13 @@ public class MusicManager : MonoBehaviour
     public void Stop()
     {
         music.Stop();
+    }
+    private void Update()
+    {
+       string currentLevelName = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().CurrentLevel();
+        if (currentLevelName == "VideoBeforeEnd")
+        {
+            Stop();
+        }
     }
 }
