@@ -7,6 +7,39 @@ TagManager:
   - Bullet
   - Health
   - Gold
+  - slot1
+  - slot2
+  - slot3
+  - slot4
+  - slot5
+  - item_HealthPotion
+  - bullet
+  - item_Grenade
+  - item_Shield
+  - item_BoostSpeed
+  - Shop
+  - shop
+  - shop_HealthPotion
+  - shop_BoostSpeed
+  - shop_Grenade
+  - shop_Shield
+  - BulletEnemy
+  - Canvas
+  - HealthSlider
+  - HealthText
+  - GoldText
+  - GrenadeArea
+  - GrenadeRange
+  - ShieldBody
+  - Weapon
+  - ArmorValue
+  - DamageValue
+  - FirePoint
+  - Spike
+  - Enemy
+  - Inventory
+  - Pannels
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -16,9 +49,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Bullet
+  - BulletEnemy
   - 
   - 
   - 

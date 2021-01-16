@@ -6,17 +6,18 @@ using UnityEngine.UI;
 
 public class PickGold : MonoBehaviour
 {
-    public Text text;
+    private Text text;
     private System.Random random;
     // Start is called before the first frame update
     private void Start()
     {
         random = new System.Random();
+        text = GameObject.FindGameObjectWithTag("GoldText").GetComponent<Text>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("asd");
+        //Debug.Log("asd");
         if (other.gameObject.CompareTag("Gold"))
         {
             other.gameObject.SetActive(false);

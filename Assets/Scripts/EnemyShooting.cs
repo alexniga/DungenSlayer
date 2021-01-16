@@ -40,6 +40,7 @@ public class EnemyShooting : MonoBehaviour
             attackTimer = 0f;
 
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            bullet.GetComponent<Bullet>().bulletDamage = 30;
             Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
             rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
