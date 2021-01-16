@@ -18,6 +18,7 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             SceneManager.LoadScene(nextLevelName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(currentLevelName);
         }

@@ -49,7 +49,7 @@ public class DragonHealth : MonoBehaviour
             opened = 2;
             fire.GetComponent<Collider2D>().enabled = true;
             fire.GetComponent<SpriteRenderer>().color= Color.red;
-            timer = DateTime.UtcNow.AddSeconds(2);
+            timer = DateTime.UtcNow.AddSeconds(1);
             print(opened);
             
         }
@@ -77,7 +77,7 @@ public class DragonHealth : MonoBehaviour
                     state[i] = false;
                     fire.SetActive(true);
                     opened = 1;
-                    timer = DateTime.UtcNow.AddSeconds(2);
+                    timer = DateTime.UtcNow.AddSeconds(1);
                     fire.GetComponent<SpriteRenderer>().color = new Color(1f,1f,0f,0.2f);
                     fire.GetComponent<Collider2D>().enabled = false;
                     break;
