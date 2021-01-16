@@ -5497,7 +5497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1014761437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6227,7 +6227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1220475650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7727,6 +7727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCanceled: 0
   isUsed: 0
+  explosionPrefab: {fileID: 5805660353441608303, guid: 17f83bd6dafb1a64582b6ad41bcbebf1,
+    type: 3}
 --- !u!1 &1567255440
 GameObject:
   m_ObjectHideFlags: 0

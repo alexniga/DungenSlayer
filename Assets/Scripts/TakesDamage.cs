@@ -29,7 +29,7 @@ public class TakesDamage : MonoBehaviour
         }
         if (obj.CompareTag("BulletEnemy"))
         {
-            Debug.Log(slider);
+            //Debug.Log(slider);
             int bulletDamage = obj.GetComponent<Bullet>().bulletDamage;
             Damage(bulletDamage);
         }
@@ -57,7 +57,7 @@ public class TakesDamage : MonoBehaviour
         slider.value = slider.value - val * (100f - float.Parse(damageReduction.text)) / 100;
         if (slider.value > 0)
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
 
             healthText.text = slider.value.ToString() + " / 100";
         }

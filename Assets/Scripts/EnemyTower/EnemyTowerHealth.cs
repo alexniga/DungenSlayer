@@ -42,4 +42,9 @@ public class EnemyTowerHealth : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    public void GrenadeDamage()
+    {
+        health -= 50;
+        healthBar.SetHealth(health);
+    }
 }
