@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 247477229663783709}
   - component: {fileID: 7429945815265823497}
   - component: {fileID: 6210524676156036080}
+  - component: {fileID: -8395182027833155539}
   m_Layer: 8
   m_Name: Dragon
   m_TagString: Enemy
@@ -338,6 +339,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7475440383639409376}
   fire: {fileID: 2111673225}
+--- !u!114 &-8395182027833155539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125893173262947151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0216531c1f65ec4683422bb51624efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.4
 --- !u!1 &4400992734141369291
 GameObject:
   m_ObjectHideFlags: 0
